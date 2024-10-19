@@ -266,7 +266,7 @@ export class AuthApiClient {
   }
 
   private async calculateXVCKey(deviceUUID: string, userAgent: string, email: string): Promise<string> {
-    return (await this.xvcProvider.toFullXVCKey(deviceUUID, userAgent, email)).substring(0, 16);
+    return (await this.xvcProvider.toFullXVCKey(deviceUUID, userAgent, email)).substring(0, 8);
   }
 
   private getApiPath(api: string) {
